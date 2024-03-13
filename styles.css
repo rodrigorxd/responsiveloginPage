@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root{
+    --default-color: #024904;
+    --light-bg: #FAFFF9;
+    --default-white: #FFF;
+    --text-black: #000;
+    --text-dark: #524E4E;
+    --hyper-link: #1D4EFC;
+    --default-gap: 2rem;
+    --default-radius: 1.2rem;
+}
+
+.container{
+    background-color: var(--light-bg);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    gap: var(--default-gap);
+}
+
+.main__box{
+    background-color: var(--default-white);
+    height: 500px;
+    border-radius: 1.8rem;
+    max-width: 700px;
+    box-shadow: 0px 0px 2px var(--text-black);
+    display: flex;
+    align-items: center;
+}
+
+.login__main--box, .cadastro__box{
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-gap);
+    text-align: center;
+    width: 50%;
+}
+
+.form__name{
+    font-size: 2rem;
+    color: var(--default-color);
+    font-weight: bold;
+    margin-bottom: var(--default-gap);
+}
+
+.form__field, .form__button{
+    border: 1px solid var(--default-color);
+    border-radius: var(--default-radius);
+    padding: 0.8rem;
+    width: 250px;
+}
+
+input, .form__field::placeholder{
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.passwd{
+    margin-top: 1rem;
+    margin-bottom: var(--default-gap);
+}
+
+.form__button{
+    font-weight: bold;
+    color: var(--default-white);
+    background-color: var(--default-color);
+    cursor: pointer;
+}
+
+.password__reset, .footer__link{
+    text-decoration: underline;
+    color: var(--hyper-link);
+}
+
+.cadastro__box{
+    background-color: var(--default-color);
+    width: 50%;
+    height: 100%;
+    border-radius: 15rem 1.8rem 1.8rem 15rem;
+    justify-content: center;
+}
+
+
+.cadastro__title{
+    color: var(--default-white);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.cadastro__button{
+    background-color: var(--default-white);
+    width: 250px;
+    margin: 0 auto;
+    color: var(--default-color);
+    border-radius: var(--default-radius);
+    font-weight: bold;
+    padding: 0.8rem;
+}
+
+.footer__box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form__button:hover{
+    background-color: var(--default-white);
+    color: var(--default-color);
+}
+
+@media screen and (max-width: 740px){
+    .main__box{
+        flex-direction: column;
+        padding: 1rem 0 0;
+        gap: 1rem;
+    }
+
+    .cadastro__box{
+        width: 100%;
+        border-radius: 0px 0px 1.8rem 1.8rem;
+    }
+
+    .login__main--box{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 539px){
+    .main__box{
+       width: 90%;
+    }
+}   
